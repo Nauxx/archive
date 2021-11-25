@@ -43,22 +43,3 @@ app.use(express.static('public'));
 app.listen(serverPort, () => {
   console.log(`listening on port 8000`);
 });
-
-/* const getXmlAndPostToArchive = async () => {
-      try {
-        const response = await axios.get(data.toString());
-        xml2js.parseString(response.data, (err, result) => {
-          const locList = result.urlset.url.map((set) => set.loc[0]);
-
-          locList.forEach((element, index, array) => {
-            setTimeout(function () {
-              post data to  https://web.archive.org/save/$element
-              ws.send(`saving url ${index + 1} of ${array.length}: ${element}`);
-            }, index * 300);
-          });
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getXmlAndPostToArchive(); */
